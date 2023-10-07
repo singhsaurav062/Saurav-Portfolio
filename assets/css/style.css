@@ -518,6 +518,58 @@ main {
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
+/* Style for the card container */
+.mainc {
+  width: 120px; /* Adjust the width to your preference */
+  height: 120px; /* Adjust the height to your preference */
+  background-color: #525252; /* Grey background color */
+  border-radius: 10px; /* Curved edges */
+  perspective: 1000px; /* Define perspective for 3D effect */
+  position: relative;
+  overflow: hidden; /* Ensure the photo doesn't overflow the card */
+}
+
+/* Style for the card when it's not flipped */
+.thec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Style for both the front and back of the card */
+.frontc, .backc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the back of the card */
+.backc {
+  transform: rotateY(180deg); /* Start with the back of the card flipped */
+}
+
+/* Style for the photos */
+.frontc img, .backc img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+/* Hover effect to flip the card */
+.mainc:hover .thec {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+
+
 
 .about .article-title { margin-bottom: 15px; }
 
