@@ -1740,6 +1740,136 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+@media (max-width: 575px) {
+  /**
+   * REUSED STYLE
+   */
+  .sidebar,
+  article {
+    width: auto;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-button {
+    width: 100px;
+  }
+
+  /**
+   * SIDEBAR
+   */
+  .sidebar-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainc {
+    margin-bottom: 10px;
+  }
+
+  .info-content {
+    margin-top: 10px;
+  }
+
+  .sidebar-info_more {
+    padding-top: 10px;
+  }
+
+  .contacts-list,
+  .social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-item {
+    margin-bottom: 8px;
+  }
+
+  .sidebar {
+    max-height: 250px;
+    height: auto; /* Allow the sidebar to expand vertically */
+  }
+
+  /**
+   * NAVBAR
+   */
+  .navbar-link {
+    --fs-8: 15px;
+  }
+
+  /**
+   * ABOUT
+   */
+  /* testimonials modal */
+  .testimonials-modal {
+    gap: 35px;
+    max-width: 680px;
+  }
+
+  .modal-avatar-box img {
+    width: 80px;
+  }
+
+  /**
+   * PORTFOLIO
+   */
+  .article-title {
+    padding-bottom: 20px;
+  }
+
+  .filter-select-box {
+    display: none;
+  }
+
+  .filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+  }
+
+  .filter-item button {
+    color: var(--light-gray);
+    font-size: var(--fs-5);
+    transition: var(--transition-1);
+  }
+
+  .filter-item button:hover {
+    color: var(--light-gray-70);
+  }
+
+  .filter-item button.active {
+    color: var(--orange-yellow-crayola);
+  }
+
+  /* portfolio and blog grid */
+  .project-list,
+  .blog-posts-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /**
+   * CONTACT
+   */
+  .input-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-btn {
+    width: max-content;
+    margin-left: auto;
+  }
+}
+
 
 
 
