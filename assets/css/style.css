@@ -1939,6 +1939,39 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar-info_more {
     opacity: 1;
     visibility: visible;
+    margin-top: 5px;
+  }
+
+  .sidebar {
+    max-height: 250px;
+    height: auto; /* Allow the sidebar to expand vertically */
+  }
+
+  .sidebar.active {
+    max-height: 1000px; /* Set a sufficiently large value to ensure full expansion */
+  }
+
+  .info_more-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 0 15px;
+    font-size: 13px;
+    color: var(--orange-yellow-crayola);
+    background: var(--border-gradient-onyx);
+    padding: 10px;
+    box-shadow: var(--shadow-2);
+    transition: var(--transition-1);
+    z-index: 1;
+  }
+
+  .info_more-btn span {
+    display: none;
+  }
+
+  .sidebar-info_more {
+    opacity: 1;
+    visibility: visible;
   }
 
   .sidebar-info_more {
@@ -1985,7 +2018,31 @@ textarea.form-input::-webkit-resizer { display: none; }
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide any overflow */
     text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+  .info-content .name {
+    color: var(--white-2);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-500);
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+  
+  .info-content .title {
+    color: var(--white-1);
+    background: var(--onyx);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-300);
+    width: max-content;
+    padding: 3px 12px;
+    border-radius: 8px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+  }
+  
+
   
 
 
